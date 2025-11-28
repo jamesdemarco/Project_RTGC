@@ -21,6 +21,14 @@ int signalCount = 0;
 bool waitingForPattern = false;
 bool lastPressureState = LOW;
 
+// ============ Forward Declarations ============
+void monitorPressureSensor();
+void decideState();
+void transmitIMUData();
+void sendOrientationLockMessage();
+void shiftAndStore(unsigned long currentTime);
+void resetPattern();
+
 void setup() {
   Serial.begin(SERIAL_BAUD);
   delay(500);  // Allow serial to stabilize

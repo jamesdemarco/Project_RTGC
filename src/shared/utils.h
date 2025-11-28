@@ -17,12 +17,6 @@ inline T mapRange(T value, T inMin, T inMax, T outMin, T outMax) {
   return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
-// Constrain (alias for clamp)
-template <typename T>
-inline T constrain(T value, T minVal, T maxVal) {
-  return clamp(value, minVal, maxVal);
-}
-
 // Absolute value
 template <typename T>
 inline T absValue(T value) {
